@@ -38,6 +38,72 @@ let someNumber = 33; //* THE RESULT IS IN NUMBER
 
 //** WHEN YOU WRITE String HERE IS WILL CONVERTS THE VARIABLE TO WHAT YOU WANT */
 let stringNumber = String(someNumber);
-console.log(stringNumber);
-console.log(typeof stringNumber); //* WHEN WE CHECK ITS typeof IT'S SHOWS STRING
+//console.log(stringNumber);
+//console.log(typeof stringNumber); //* WHEN WE CHECK ITS typeof IT'S SHOWS STRING
+
+
+//********************* OPERATIONS **************************************//
+
+let value = 3;
+let negValue = -value;
+//console.log(negValue);
+
+//* THESE ALL ARE CALLED REMENDERS
+//console.log(2 + 2);
+//console.log(2 - 2);
+//console.log(2 * 2);
+//console.log(2 ** 3);
+//console.log(2 / 3);
+//console.log(2 % 3);
+
+let str1 = "Hello"
+let str2 = " Abrar"
+
+let str3 = str1 + str2;
+//console.log(str3);
+
+//!!!!!!! THESE ARE CALLED CONFUSION CODE  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//console.log(true); //* RESULT : true
+//console.log(+true); //* RESULT : 1
+//console.log(-true); //* RESULT : -1
+
+//console.log(""); //* RESULT : blank space
+//console.log(+""); //* RESULT : 0
+
+
+//console.log(false); //* RESULT : false
+//console.log(+false); //* RESULT : 0
+//console.log(-false); //* RESULT : -0
+
+//let num1, num2, num3;
+//num1 = num2 = num3 = 2 + 2;
+//console.log(num1, num2, num3); //* RESULT IS IN NUMBERS 4 4 4
+
+//let gameCounter = 100;
+//gameCounter++; //* THIS WILL INCREASE THE VALUE BY 1. THIS CALLED POSTFIEXD
+//++gameCounter; //* THIS CALLED PREFIXED
+//console.log(gameCounter);
+
+//gameCounter--; //* THIS WILL DECREASE THE VALUE BY 1. THIS CALLED POSTFIEXD
+//--gameCounter; //* THIS CALLED PREFIXED
+//console.log(gameCounter);
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+//console.log("1" + 2);//* THE RESULT OF THIS WILL COME IN STRING like: 12
+//console.log(1 + "2");//* THE RESULT OF THIS SAME AS THE ABOVE ONE like: 12
+//console.log("1" + "2");//* THE RESULT OF THIS WILL COME IN STRING like: 12
+//console.log("1" + 2 + 2);//* THE RESULT OF THIS WILL COME IN STRING like: 122
+//console.log("1" + "2" + 2);//* THE RESULT OF THIS WILL COME IN STRING like: 122
+//console.log(1 + 2 + "2");//* THE RESULT OF THIS WILL COME IN STRING like: 32
+
+//console.log(1 + 2); //* THE RESULT OF THIS WILL COME IN NUMBER like: 3
+
+
+//console.log(3 + 4 * 5 % 3); //* RESULT : 5
+//console.log((3 + 4) * 5 % 3);//* RESULT : 2
+//console.log(3 + 4 * (5 % 3));//* RESULT : 11
+//console.log(3 + (4 * 5 % 3));//* RESULT : 5
+
 
