@@ -19,7 +19,7 @@
 
 //* WHEN WE TEST USING undefined THE ANSWER WILL COME IN FALSE
 //* TRY TO AVOID THESE TYPES OF console.log
-//console.log(undefined == 0); 
+//console.log(undefined == 0);
 //console.log(undefined >= 0);
 //console.log(undefined > 0);
 //console.log(undefined < 0);

@@ -4,7 +4,7 @@
 //let score = undefined; //* RESULT IS NaN. IT MEANS (NOT A NUMBER)
 //let score = true; //* RESULT IS 1
 //let score = false; //* RESULT IS 0
-let score = "Abrar"; //* RESULT IS NaN
+//let score = "Abrar"; //* RESULT IS NaN
 
 
 //console.log(typeof score);
@@ -12,7 +12,7 @@ let score = "Abrar"; //* RESULT IS NaN
 
 
 //** WHEN YOU WRITE Number HERE IS WILL CONVERTS THE VARIABLE TO WHAT YOU WANT */
-let valueInNumber = Number(score)
+//let valueInNumber = Number(score)
 //console.log(typeof valueInNumber);
 //console.log(valueInNumber);
 
@@ -23,10 +23,10 @@ let valueInNumber = Number(score)
 //let isLoggedIn = 1; //* RESULT IS TRUE
 //let isLoggedIn = 0; //* RESULT IS FALSE
 //let isLoggedIn = ""; //* RESULT IS FALSE
-let isLoggedIn = "Abrar"; //* RESULT IS TRUE
+//let isLoggedIn = "Abrar"; //* RESULT IS TRUE
 
 //****** WHEN YOU WRITE Boolean HERE IS WILL CONVERTS THE VARIABLE TO WHAT YOU WANT */
-let booleanIsLoggedIn = Boolean(isLoggedIn);
+//let booleanIsLoggedIn = Boolean(isLoggedIn);
 //console.log(booleanIsLoggedIn);
 
 //* 1 => true; 0 => false
@@ -34,18 +34,18 @@ let booleanIsLoggedIn = Boolean(isLoggedIn);
 //* "Abrar" => true
 
 
-let someNumber = 33; //* THE RESULT IS IN NUMBER
+//let someNumber = 33; //* THE RESULT IS IN NUMBER
 
 //** WHEN YOU WRITE String HERE IS WILL CONVERTS THE VARIABLE TO WHAT YOU WANT */
-let stringNumber = String(someNumber);
+//let stringNumber = String(someNumber);
 //console.log(stringNumber);
 //console.log(typeof stringNumber); //* WHEN WE CHECK ITS typeof IT'S SHOWS STRING
 
 
 //********************* OPERATIONS **************************************//
 
-let value = 3;
-let negValue = -value;
+//let value = 3;
+//let negValue = -value;
 //console.log(negValue);
 
 //* THESE ALL ARE CALLED REMENDERS
@@ -56,13 +56,13 @@ let negValue = -value;
 //console.log(2 / 3);
 //console.log(2 % 3);
 
-let str1 = "Hello"
-let str2 = " Abrar"
+//let str1 = "Hello"
+//let str2 = " Abrar"
 
-let str3 = str1 + str2;
+//let str3 = str1 + str2;
 //console.log(str3);
 
-//!!!!!!! THESE ARE CALLED CONFUSION CODE  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//****** THESE ARE CALLED CONFUSION CODE  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //console.log(true); //* RESULT : true
 //console.log(+true); //* RESULT : 1
 //console.log(-true); //* RESULT : -1
@@ -88,8 +88,7 @@ let str3 = str1 + str2;
 //--gameCounter; //* THIS CALLED PREFIXED
 //console.log(gameCounter);
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+//**********************************************************************************
 
 //console.log("1" + 2);//* THE RESULT OF THIS WILL COME IN STRING like: 12
 //console.log(1 + "2");//* THE RESULT OF THIS SAME AS THE ABOVE ONE like: 12
@@ -107,3 +106,29 @@ let str3 = str1 + str2;
 //console.log(3 + (4 * 5 % 3));//* RESULT : 5
 
 
+//**************************************************************************************************/
+
+
+//************* Memory ********************************* 
+//* THERE ARE TWO TYPES OF MEMORY IN JS. 1:Stack, 2:Heap,
+
+//* Stack is (Primitive), give you a variable copy.
+let myYoutubeName = "TKD_Abrar";
+let anotherName = myYoutubeName;
+anotherName = "UltraMan";
+
+console.log(anotherName);
+console.log(myYoutubeName);
+
+//* Heap is (Non-Primitive), give you original reference.
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl",
+};
+
+let userTwo = userOne;
+
+userTwo.email = "abrar@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
