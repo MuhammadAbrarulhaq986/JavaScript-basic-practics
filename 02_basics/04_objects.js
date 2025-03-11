@@ -41,11 +41,54 @@ const users = [
 ]
 
 users[1].email
-console.log(tinderUser);
+//console.log(tinderUser);
 
-console.log(Object.keys(tinderUser)); //* [ 'id', 'name', 'isLoggedIn' ]
-console.log(Object.values(tinderUser)); //* [ '123abc', 'Johan', false ]
-console.log(Object.entries(tinderUser)); //* [ [ 'id', '123abc' ], [ 'name', 'Johan' ], [ 'isLoggedIn', false ] ]
+//console.log(Object.keys(tinderUser)); //* [ 'id', 'name', 'isLoggedIn' ]
+//console.log(Object.values(tinderUser)); //* [ '123abc', 'Johan', false ]
+//console.log(Object.entries(tinderUser)); //* [ [ 'id', '123abc' ], [ 'name', 'Johan' ], [ 'isLoggedIn', false ] ]
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn")); //* true
+//console.log(tinderUser.hasOwnProperty("isLoggedIn")); //* true
+
+
+const course = {
+    courseName: "JS in Urde",
+    price: "999",
+    courseInstructor: "Abrar"
+
+}
+
+//course.courseInstructor; //* THIS IS HOW YOU CAN ACCESS THIS OBJECT. THIS IS A OLD WAY.
+
+//*WE ARE USING "syntactic sugar" refers to syntax that simplifies code, making it more readable or easier to write, without altering the underlying functionality
+//const { courseInstructor } = course; //* THIS IS A NEW AND EASY WAY.
+const { courseInstructor: instructor } = course; //* THIS IS CALLED OBJECT DE-STRUCTURE 
+
+//console.log(courseInstructor);
+console.log(instructor);
+
+
+//* THIS IS HOW YOU WILL GET RESPONS FORM API'S.
+//* THIS IS CALLED JSON FORMAT
+//{
+//    "name": "Abrar",
+//    "courseName": "JS in Urdu",
+//    "price": "free"
+//}
+
+[
+    {},
+    {},
+    {}
+]
+
+
+
+//* THIS IS HOW WE DE-STRUCTURE IN REACT. KNOW THIS WILL REMINED YOU THAT THIS IS CALLED DE-STRUCTURE
+//const navbar = ({company}) =>{
+//}
+
+//navbar(company = "Royal Stars")
+
+
+
 
