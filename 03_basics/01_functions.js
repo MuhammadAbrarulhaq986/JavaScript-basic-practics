@@ -36,7 +36,7 @@ const result = addTwoNumbers(3, 5);//*
 function loginUserMessage(username = "Johan") {//* in this we set a default value if the user didn't wirte his name it will automaticaly give Johan
     //if (username === undefined) { 
     if (!username) { //* short version of the above one 
-        console.log("Please enter a username");
+        //console.log("Please enter a username");
         return
     }
     return `${username} just logged in`//*
@@ -44,4 +44,33 @@ function loginUserMessage(username = "Johan") {//* in this we set a default valu
 
 //console.log(loginUserMessage("Abrar"));
 //console.log(loginUserMessage("")); //* result:  just logged in
-console.log(loginUserMessage()); //* result: undefined
+//console.log(loginUserMessage()); //* result: undefined
+
+
+//function calculateCartPrice(...num1) {//* (...num1) this is called rest operator.
+function calculateCartPrice(val1, val2, ...num1) {//* (val1, val2, ...num1) In this the starting 2 value in this case( 100, 200) will not print.
+    return num1;
+}
+//console.log(calculateCartPrice(100, 200, 300, 400, 500, 600));
+
+
+const user = {
+    username: "Abrar",
+    price: 199,
+}
+
+function handleObject(anyObject) {
+    //console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);//* When taking an object always check the spllings. IF you wirte wrong splling the error will show undefined. 
+}
+//handleObject(user);
+handleObject({ //* Directly passing an object
+    username: "Johan",
+    price: 399,
+});
+
+const myNewArray = [200, 400, 100, 600];
+function returnSecondValue(getArray) {
+    return getArray[1];
+}
+//console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 400, 500, 1000]));
