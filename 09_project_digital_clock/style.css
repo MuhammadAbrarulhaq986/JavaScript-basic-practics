@@ -1,0 +1,264 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styles */
+nav {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: rgb(26, 255, 0);
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgb(26, 255, 0), 0 0 20px rgb(26, 255, 0);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: rgb(26, 255, 0);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Center Container */
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  position: relative;
+}
+
+/* Banner Styles */
+#banner {
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  animation: float 3s ease-in-out infinite;
+}
+
+#banner::before,
+#banner::after {
+  content: "✦";
+  position: absolute;
+  color: rgb(26, 255, 0);
+  animation: spin 4s linear infinite;
+}
+
+#banner::before {
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#banner::after {
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Clock Styles */
+#clock {
+  font-size: 5rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.1),
+    inset 0 0 10px rgba(0, 255, 255, 0.1);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+  color: rgb(0, 255, 8);
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s infinite alternate;
+}
+
+#clock::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 255, 255, 0) 0%,
+    rgba(0, 255, 255, 0.1) 50%,
+    rgba(0, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 3s infinite;
+}
+
+/* Background Elements */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(0, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(255, 0, 255, 0.1) 0%,
+      transparent 50%
+    );
+  z-index: -1;
+  animation: moveBackground 20s linear infinite alternate;
+}
+
+/* Animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.1),
+      inset 0 0 10px rgba(0, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.2),
+      inset 0 0 15px rgba(0, 255, 255, 0.2);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: rotate(30deg) translate(-10%, -10%);
+  }
+  100% {
+    transform: rotate(30deg) translate(10%, 10%);
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5%, 5%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #clock {
+    font-size: 3rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  #banner {
+    font-size: 1rem;
+  }
+}
+
+/* ================= MATRIX RAIN BACKGROUND ================= */
+.matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* ================= GLITCH EFFECT ON CLOCK HOVER ================= */
+#clock:hover {
+  animation: glitch 0.5s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* ================= ELECTRIC PULSE ON CLICK ================= */
+#clock:active {
+  animation: electric-pulse 0.3s;
+}
+
+@keyframes electric-pulse {
+  0% {
+    text-shadow: 0 0 10px rgb(26, 255, 0);
+  }
+  50% {
+    text-shadow: 0 0 30px rgb(26, 255, 0), 0 0 60px rgb(26, 255, 0);
+  }
+  100% {
+    text-shadow: 0 0 10px rgb(26, 255, 0);
+  }
+}
