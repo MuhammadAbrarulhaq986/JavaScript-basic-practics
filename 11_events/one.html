@@ -17,7 +17,12 @@
         </li>
         <li><img width="200px" id="prayer" src="./five.webp" alt="" /></li>
         <li>
-          <a style="color: aliceblue" href="https://google.com" id="google">
+          <a
+            style="color: aliceblue; font-weight: bolder"
+            href="https://www.google.com/"
+            id="google"
+          >
+            <img width="200px" id="prayer" src="./six.webp" alt="" />
           </a>
         </li>
       </ul>
@@ -42,19 +47,46 @@
     // client Positions: clientX , clientY,
     // screenPositions: screenX, screenY
     // altKey, ctrlKey, shiftKey, KeyCode
-    document.getElementById("images").addEventListener(
+    //document.getElementById("images").addEventListener(
+    //  "click",
+    //  function (e) {
+    //    console.log("clicked inside the UL");
+    //  },
+    //  false // this is used in bubble-up
+    //  //true // this is used for capchring
+    //);
+    //document.getElementById("owl").addEventListener(
+    //  "click",
+    //  function (e) {
+    //    console.log("Owl clicked");
+    //    e.stopPropagation(); // this will stop the propagation
+    //  },
+    //  false // this is used in bubble-up
+    //  //true // this is used for capchring
+    //);
+    //document.getElementById("google").addEventListener(
+    //  "click",
+    //  function (e) {
+    //    e.preventDefault();
+    //    console.log("Clicked on Google");
+    //  },
+    //  false
+    //);
+
+    document.querySelector("#images").addEventListener(
       "click",
       function (e) {
-        console.log("clicked inside the UL");
+        //console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+
+          let removeIt = e.target.parentNode;
+          removeIt.remove(); // this will remove the element from the DOM
+        }
       },
       false
     );
-    document.getElementById("owl").addEventListener(
-      "click",
-      function (e) {
-        console.log("Owl clicked");
-      },
-      false
-    );
+    //removeIt.parentNode.removeChild(removeIt); // this will remove the element from the DOM
   </script>
 </html>
